@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f7f5">
+  <title>Связь рядом — помощь с интернетом</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Связь рядом — главная"><span class="brand-mark">↗</span><span>связь<span class="brand-light">рядом</span></span></a>
+    <nav aria-label="Основная навигация"><a href="#diagnostic">Есть проблема?</a><a href="#learning">После установки</a><a href="#guides">Инструкции</a><a href="#terms">Словарь</a></nav>
+    <button class="share-btn" id="shareBtn">Поделиться памяткой <span>↗</span></button>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy"><div class="eyebrow"><span class="pulse"></span> ПОНЯТНАЯ ПОМОЩЬ С ИНТЕРНЕТОМ</div>
+        <h1>Интернет<br>не работает?<br><em>Разберёмся вместе.</em></h1>
+        <p>Выберите, что случилось. Подскажем, где проверить и что можно безопасно сделать самому — шаг за шагом.</p>
+        <a class="primary-btn" href="#diagnostic">Начать проверку <span>↓</span></a>
+        <div class="trust"><span class="avatars">● ● ●</span><span>Спокойно, просто и без сложных терминов</span></div>
+      </div>
+      <div class="hero-art" aria-label="Иллюстрация домашнего Wi-Fi"><div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div><div class="router"><div class="antenna a1"></div><div class="antenna a2"></div><div class="router-top"><span></span><span></span><span></span></div><div class="router-front"><i></i><i></i><i></i><i></i></div></div><div class="wifi-symbol">⌁</div><div class="device device-phone">▯<small>телефон</small></div><div class="device device-laptop">▱<small>ноутбук</small></div><div class="status-pill"><span></span> проверим по порядку</div><div class="spark s1">✳</div><div class="spark s2">✦</div></div>
+    </section>
+    <section class="diagnostic section" id="diagnostic">
+      <div class="section-heading"><div><div class="eyebrow">СНАЧАЛА — СИМПТОМ</div><h2>Что происходит?</h2></div><p>Выберите самый похожий вариант.<br>Проверка займёт пару минут.</p></div>
+      <div class="symptom-grid" id="symptoms">
+        <button class="symptom-card" data-case="none"><span class="sym-icon red">⌁</span><strong>Интернета нет совсем</strong><small>Устройства подключены, но сайты не открываются</small><span class="card-arrow">↗</span></button>
+        <button class="symptom-card" data-case="slow"><span class="sym-icon yellow">◷</span><strong>Интернет медленный</strong><small>Видео тормозит, страницы долго грузятся</small><span class="card-arrow">↗</span></button>
+        <button class="symptom-card" data-case="wifi"><span class="sym-icon blue">⌁</span><strong>Wi‑Fi пропадает</strong><small>Связь нестабильна или не в каждой комнате</small><span class="card-arrow">↗</span></button>
+        <button class="symptom-card" data-case="device"><span class="sym-icon green">▣</span><strong>Не подключается одно устройство</strong><small>На других телефонах или компьютерах всё работает</small><span class="card-arrow">↗</span></button>
+      </div>
+      <div class="flow-panel" id="flowPanel" hidden></div>
+      <div class="safety-note"><span>ⓘ</span><p><b>Важно:</b> не нажимайте кнопку Reset и не отсоединяйте тонкий оптический кабель. Если вы заметили повреждение кабеля или запах гари — не трогайте оборудование и обратитесь в поддержку.</p></div>
+    </section>
+    <section class="learning section" id="learning">
+      <div class="learning-intro"><div class="eyebrow">НОВОЕ ПОДКЛЮЧЕНИЕ</div><h2>Всё настроено.<br><em>Что дальше?</em></h2><p>Короткий курс поможет освоиться после установки: где поставить роутер, как подключить устройства и что означают индикаторы.</p><a href="#lesson" class="text-link">Открыть мини-курс <span>→</span></a><div class="course-meta"><span>4 коротких урока</span><span>·</span><span>около 5 минут</span></div></div>
+      <div class="lesson-card" id="lesson"><div class="lesson-card-head"><span>БЫСТРЫЙ СТАРТ</span><span class="lesson-count" id="lessonCount">01 / 04</span></div><div class="lesson-progress"><i id="lessonProgress"></i></div><div class="lesson-content" id="lessonContent"></div><div class="lesson-controls"><button id="prevLesson" aria-label="Предыдущий урок">←</button><div class="lesson-dots" id="lessonDots"></div><button id="nextLesson" aria-label="Следующий урок">→</button></div></div>
+    </section>
+    <section class="guides section" id="guides">
+      <div class="section-heading"><div><div class="eyebrow">ИНСТРУКЦИЯ ПО МОДЕЛИ</div><h2>Напишите модель устройства</h2></div><p>Подберём поиск видео и страницу<br>производителя для точной модели.</p></div>
+      <div class="guide-finder"><div class="finder-input"><label for="modelInput">Марка и модель</label><div class="input-row"><input id="modelInput" type="search" placeholder="Например, TP-Link TD-W8961N" autocomplete="off"><button id="findGuide">Найти инструкции <span>→</span></button></div><small>Модель указана на наклейке снизу или сзади устройства. Серийный номер и пароль не вводите.</small></div><div class="finder-results" id="guideResults"><div class="finder-empty"><span>⌕</span><p>Введите модель — появятся полезные ссылки</p></div></div></div>
+      <div class="guide-columns">
+        <article class="text-guide"><div class="guide-label">ТЕКСТОВАЯ ПАМЯТКА · ADSL</div><h3>Настройка ADSL-модема</h3><ol><li>Подключите телефонную линию к разъёму <b>DSL/ADSL</b>. Если используется сплиттер, соблюдайте маркировку LINE, PHONE и MODEM.</li><li>Подключите питание и дождитесь постоянного индикатора DSL. Если он не загорается или продолжает мигать, проверьте кабель и обратитесь к оператору.</li><li>Подключите телефон или компьютер к Wi‑Fi модема либо кабелем к LAN.</li><li>Для доступа к интернету может понадобиться тип соединения и логин/пароль от оператора. Не угадывайте значения VPI/VCI, VLAN и PPPoE — уточните их у своего провайдера.</li><li>Задайте свой пароль Wi‑Fi, сохраните изменения и дождитесь перезапуска.</li></ol><p class="guide-caution">Не нажимайте Reset без необходимости: настройки подключения могут стереться.</p></article>
+        <article class="text-guide"><div class="guide-label">ТЕКСТОВАЯ ПАМЯТКА · ТВ</div><h3>Подключение ТВ-приставки</h3><ol><li>Соедините приставку и телевизор HDMI-кабелем.</li><li>Подключите приставку к роутеру сетевым кабелем (если модель поддерживает Wi‑Fi, можно настроить его на экране).</li><li>Подключите питание, включите телевизор и выберите тот HDMI-вход, куда вставлен кабель.</li><li>Дождитесь загрузки и следуйте подсказкам на экране. Для входа в TV+ используйте код из SMS только на экране приставки.</li><li>Если появляется ошибка сети, проверьте интернет на другом устройстве и посадку сетевого кабеля.</li></ol><p class="guide-caution">Официальная инструкция ниже относится к Eltex NV 711. Для другой модели найдите руководство по её точному названию.</p></article>
+      </div>
+      <div class="official-links"><div><span class="official-icon">↗</span><div><b>Казахтелеком TV+ · официальные инструкции</b><small>Руководство Eltex NV 711, FAQ и помощь с приставкой</small></div></div><a href="https://tv.telecom.kz/kk/faq" target="_blank" rel="noopener noreferrer">Открыть FAQ <span>↗</span></a></div>
+      <p class="guide-disclaimer">Ссылки на видео ведут к результатам поиска по указанной модели, а не к проверенному ролику. Перед настройкой сверьте аппаратную версию и следуйте параметрам вашего оператора.</p>
+    </section>
+    <section class="terms section" id="terms"><div class="section-heading"><div><div class="eyebrow">НЕЗНАКОМОЕ СЛОВО?</div><h2>Связь без жаргона</h2></div><p>Нажмите на термин,<br>чтобы увидеть объяснение.</p></div><div class="term-list" id="termList"></div></section>
+    <section class="help-banner"><div class="help-symbol">?</div><div><h2>Не получилось восстановить связь?</h2><p>Специалист поддержки поможет проверить линию и оборудование.</p></div><a href="tel:160">Позвонить 160 <span>↗</span></a></section>
+  </main>
+  <footer><a class="brand" href="#top"><span class="brand-mark">↗</span><span>связь<span class="brand-light">рядом</span></span></a><span>Независимая памятка. Здесь нет проверки линии или данных абонента.</span><a href="#top">Наверх ↑</a></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
